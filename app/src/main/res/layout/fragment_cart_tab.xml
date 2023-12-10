@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.CartTab">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/booksRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:reverseLayout="true"
+                app:stackFromEnd="true"
+                tools:listitem="@layout/row_pdf_cart" />
+
+            <TextView
+                android:id="@+id/totalLabelTv"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/booksRV"
+                android:layout_marginStart="30dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/total" />
+
+            <TextView
+                android:id="@+id/totalTv"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/booksRV"
+                android:layout_toEndOf="@id/totalLabelTv"
+                android:gravity="center_vertical"
+                android:inputType="numberSigned"
+                android:maxLines="1"
+                android:text="@string/_13"
+                tools:ignore="TextViewEdits" />
+
+
+            <Button
+                android:id="@+id/buyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@id/totalLabelTv"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/shape_button01"
+                android:text="Buy"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

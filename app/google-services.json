@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "209855742112",
+    "firebase_url": "https://courseapp-c078f-default-rtdb.firebaseio.com",
+    "project_id": "courseapp-c078f",
+    "storage_bucket": "courseapp-c078f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209855742112:android:aadb12e8f3d98d433949c5",
+        "android_client_info": {
+          "package_name": "com.example.bookapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtmqyCAK48V4nOvW2rSIV-nvggI-aYB70"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

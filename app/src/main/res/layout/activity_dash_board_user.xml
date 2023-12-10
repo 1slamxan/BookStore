@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01"
+    tools:context=".activities.DashboardUserActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar02">
+
+        <ImageButton
+            android:id="@+id/profileBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/profile"
+            android:src="@drawable/ic_person_white"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/subTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/titleTV"
+            android:text="@string/abc_example_com"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/logoutBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_logout_white"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/log_out"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarRl"
+        android:layout_margin="5dp"
+        android:background="@android:color/transparent"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable"
+        app:tabUnboundedRipple="false"
+        android:contentDescription="@string/tablelayout"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tableLayout"
+        android:contentDescription="@string/viewpager"/>
+
+</RelativeLayout>
